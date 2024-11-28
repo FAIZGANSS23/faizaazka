@@ -1,0 +1,23 @@
+<?php
+echo "Bilangan prima dari 1 hingga 50 adalah:\n";
+
+for ($num = 1; $num <= 50; $num++) {
+    
+    $isPrime = true;
+
+    if ($num < 2) {
+        $isPrime = false; 
+    } else {
+        for ($i = 2; $i <= sqrt($num); $i++) { 
+            if ($num % $i == 0) {
+                $isPrime = false;
+                break; 
+            }
+        }
+    }
+
+    if ($isPrime) {
+        echo $num . " "; 
+    }
+}
+?>
